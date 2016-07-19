@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Speak English</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center">Speak English!</h1>
+    <textarea class="form-control" rows="3" style="font-size:20px"></textarea>
+    <div class="text-right">
+      <button class="btn block-right btn-lg" type="button" name="button" style="margin-top:10px">speak</button>
+    </div>
+    <hr/>
+    <p style="font-size:20px">
+      <strong>Sentence: </strong>
+    </p>
+    <p style="font-size:20px" id="content">
+
+    </p>
+
+    </div>
+  </body>
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min');
+    require('./renderer.js')
+  </script>
+
+</html>
