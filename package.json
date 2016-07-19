@@ -1,5 +1,8 @@
 {
-  "name"    : "speak-englsh",
-  "version" : "0.0.1",
-  "main"    : "main.js"
+  "name": "speak-englsh",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "say": "^0.9.0"
+  }
 }
