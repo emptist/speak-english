@@ -23,15 +23,13 @@
     </div>
     <script>
         var say = require('say');
-        window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min');
+        window.$ = window.jQuery = require('./jquery.min');
         //require('./renderer.js')
         $(function(){
           var text;
           $('button').click(function(event){
             text = $('textarea').val();
             $('#content').html(text);
-            say.speak('Hello');
-            alert('k');
           })
 
           $('textarea').keypress(function(event){
