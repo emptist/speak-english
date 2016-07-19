@@ -23,8 +23,23 @@
   </body>
   <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <script>
+    var say = require('say');
     window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min');
-    require('./renderer.js')
+    //require('./renderer.js')
+    var text;
+    $('button').click(function(event){
+      text = $('textarea').val();
+      $('#content').html(text)
+      say.speak('Hello!')
+    })
+
+    $('textarea').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+          text = $('textarea').val();
+          $('#content').html(text)
+        }
+      })
   </script>
 
 </html>
